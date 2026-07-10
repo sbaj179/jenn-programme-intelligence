@@ -2,8 +2,9 @@ import AppShell from '@/components/AppShell'
 import { demoSessions } from '@/lib/demo-data'
 import { getLearnerAttendanceRows } from '@/lib/metrics'
 
-export default function AttendanceCapturePage({ params }) {
-  const session = demoSessions.find((item) => item.id === params.id) || demoSessions[0]
+export default async function AttendanceCapturePage({ params }) {
+  const { id } = await params
+  const session = demoSessions.find((item) => item.id === id) || demoSessions[0]
   const rows = getLearnerAttendanceRows(session.id)
 
   return (
