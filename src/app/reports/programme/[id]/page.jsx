@@ -19,7 +19,7 @@ export default function ProgrammeReportPage() {
       </section>
 
       <div className="button-row no-print" style={{ marginBottom: 18 }}>
-        <button className="btn primary" type="button" onClick={undefined}>Print / save as PDF</button>
+        <span className="badge">Use browser print to save as PDF</span>
         <button className="btn secondary" type="button">Export CSV later</button>
       </div>
 
